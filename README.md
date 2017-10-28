@@ -1,7 +1,7 @@
-# Genesis Sample Theme
+# Westridge Theme
 
+Based on Genesis Sample
 Github project link: https://github.com/copyblogger/genesis-sample/
-
 
 ## Installation Instructions
 
@@ -10,8 +10,6 @@ Github project link: https://github.com/copyblogger/genesis-sample/
 3. Activate the Genesis Sample theme.
 4. Inside your WordPress dashboard, go to Genesis > Theme Settings and configure them to your liking.
 
-
-## Theme Support
-
-Please visit http://my.studiopress.com/help/ for theme support.
-# Westridge
+## Added Features
+* Sass
+* Flexbox

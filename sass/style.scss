@@ -1,0 +1,95 @@
+/*
+	Theme Name: Westridge
+	Theme URI: https://scott.loveless.org
+	Description: This is the Westridge theme based on sample theme created for the Genesis Framework.
+	Author: Scott Loveless
+	Author URI: https://scott.loveless.org
+
+	Version: 1.0.0
+
+	Tags: 
+
+	Template: genesis
+	Template Version: 1.0.0
+
+	License: GPL-2.0+
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+	Text Domain: westridge
+*/
+
+/* # Table of Contents
+- HTML5 Reset
+	- Baseline Normalize
+	- Box Sizing
+	- Float Clearing
+- Defaults
+	- Typographical Elements
+	- Headings
+	- Objects
+	- Gallery
+	- Forms
+	- Tables
+	- Screen Reader Text
+- Structure and Layout
+	- Site Containers
+	- Column Widths and Positions
+	- Column Classes
+- Common Classes
+	- Avatar
+	- Genesis
+	- Search Form
+	- Titles
+	- WordPress
+- Widgets
+	- Featured Content
+- Plugins
+	- Genesis eNews Extended
+	- Jetpack
+- Skip Links
+- Site Header
+	- Title Area
+	- Widget Area
+- Site Navigation
+	- Accessible Menu
+	- Site Header Navigation
+	- After Header Navigation
+	- Footer Navigation
+- Content Area
+	- Entries
+	- Entry Meta
+	- Pagination
+	- Comments
+- Sidebars
+- Site Footer
+  - Footer Widgets
+- Media Queries
+	- Max-width: 1340px
+	- Max-width: 1200px
+	- Max-width: 1023px
+	- Max-width: 860px
+- Print Styles
+*/
+
+@import  "partials/_variables.scss";
+@import  "partials/_reset.scss";
+@import  "partials/_defaults.scss";
+@import  "partials/_structure-layout.scss";
+@import  "partials/_common-classes.scss";
+@import  "partials/_defaults.scss";
+@import  "partials/_widgets.scss";
+@import  "partials/_plugins.scss";
+@import  "partials/_skip-links.scss";
+@import  "partials/_site-header.scss";
+@import  "partials/_site-navigation.scss";
+@import  "partials/_content-area.scss";
+@import  "partials/_sidebars.scss";
+@import  "partials/_site-footer.scss";
+@import  "partials/_media-queries.scss";
+@import  "partials/_print.scss";
+  
+  
+  
+  
+
+

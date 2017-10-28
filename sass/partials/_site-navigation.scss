@@ -1,0 +1,124 @@
+/* # Site Navigation
+  ---------------------------------------------------------------------------------------------------- */
+  
+  .genesis-nav-menu {
+    clear: both;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1;
+    width: 100%;
+    .menu-item {
+      display: inline-block;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      text-align: left;
+    }
+    a {
+      color: $dark-grey;
+      display: block;
+      padding: 3.2rem 2rem;
+      text-decoration: none;
+      &:focus, &:hover {
+        color: $primary;
+        text-decoration: underline;
+      }
+    }
+    .current-menu-item > a {
+      color: $primary;
+      text-decoration: underline;
+    }
+    .sub-menu {
+      .current-menu-item > a {
+        &:focus, &:hover {
+          color: $primary;
+          text-decoration: underline;
+        }
+      }
+      border-top: 1px solid $light-grey;
+      left: -9999px;
+      opacity: 0;
+      position: absolute;
+      -webkit-transition: opacity .4s ease-in-out;
+      -moz-transition: opacity .4s ease-in-out;
+      -ms-transition: opacity .4s ease-in-out;
+      -o-transition: opacity .4s ease-in-out;
+      transition: opacity .4s ease-in-out;
+      width: 20rem;
+      z-index: 99;
+      a {
+        background-color: $white;
+        border: 1px solid $light-grey;
+        border-top: 0;
+        font-size: 1.4rem;
+        padding: 2rem;
+        position: relative;
+        width: 20rem;
+        word-wrap: break-word;
+      }
+      .sub-menu {
+        margin: -5.6rem 0 0 19.9rem;
+      }
+    }
+    .menu-item:hover {
+      position: static;
+      > .sub-menu {
+        left: auto;
+        opacity: 1;
+      }
+    }
+    > {
+      .first > a {
+        padding-left: 0;
+      }
+      .last > a {
+        padding-right: 0;
+      }
+      .right {
+        float: right;
+      }
+    }
+  }
+  
+  /* ## Accessible Menu
+  --------------------------------------------- */
+  
+  .menu .menu-item {
+    &:focus {
+      position: static;
+    }
+    > a:focus + ul.sub-menu, &.sfHover > ul.sub-menu {
+      left: auto;
+      opacity: 1;
+    }
+  }
+  
+  .menu-toggle, .sub-menu-toggle {
+    display: none;
+    visibility: hidden;
+  }
+  
+  /* ## Site Header Navigation
+  --------------------------------------------- */
+  
+  .site-header .genesis-nav-menu li li {
+    margin-left: 0;
+  }
+  
+  /* ## After Header Navigation
+  --------------------------------------------- */
+  
+  .nav-primary {
+    background-color: $white;
+    border-top: 1px solid $light-grey;
+  }
+  
+  /* ## Footer Navigation
+  --------------------------------------------- */
+  
+  .site-footer .genesis-nav-menu {
+    padding-bottom: 2rem;
+    a {
+      padding: 0 2rem 1rem;
+    }
+  }
+  

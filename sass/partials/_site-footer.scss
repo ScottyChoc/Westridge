@@ -1,0 +1,40 @@
+  /* # Site Footer
+  ---------------------------------------------------------------------------------------------------- */
+  
+  .site-footer {
+    background-color: $white;
+    border-top: 1px solid $light-grey;
+    font-size: 1.6rem;
+    line-height: 1;
+    padding: 6rem 0;
+    text-align: center;
+    p {
+      margin-bottom: 0;
+    }
+  }
+  
+  /* ## Footer Widgets
+  --------------------------------------------- */  
+  .footer-widgets {
+    background-color: $white;
+    clear: both;
+    font-size: 1.8rem;
+    padding: 6rem 0;
+  }
+  
+  .footer-widgets-1, .footer-widgets-2, .footer-widgets-3 {
+    width: 38rem;
+  }
+  
+  .footer-widgets-1 {
+    margin-right: 7rem;
+    float: left;
+  }
+  
+  .footer-widgets-2 {
+    float: left;
+  }
+  
+  .footer-widgets-3 {
+    float: right;
+  }

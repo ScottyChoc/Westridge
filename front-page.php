@@ -83,32 +83,32 @@ function westridge_front_page_content() {
 </section>
 <section class="section3">
     <div class="wrap">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 574 355">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 574 355" class="nutrition-svg">
         <image id="3jujubes" x="105" y="20" width="373" height="314" xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/images/3jujubes.png"></image>
-        <g fill="#6D9542" fill-rule="evenodd" font-size="20" font-family="FeltTipRoman-Bold, Felt Tip Roman" font-weight="bold">
+        <g fill="#6D9542" fill-rule="evenodd" font-size="20" font-weight="bold">
             <text transform="translate(-14 -36)">
-      <tspan x="88.89" y="51">California-Grown</tspan> <tspan x="79.712" y="78" font-family="FeltTipRoman" font-size="14" font-weight="normal">In the sunny Cuyama Valley</tspan>
+      <tspan x="88.89" y="51">California-Grown</tspan> <tspan x="79.712" y="78" font-size="14" font-weight="normal">In the sunny Cuyama Valley</tspan>
     </text>
     <text transform="translate(-14 -36)">
-      <tspan x="14.79" y="135">One Ingredient</tspan> <tspan x="17.395" y="162" font-family="FeltTipRoman" font-size="14" font-weight="normal">It goes from the tree</tspan> <tspan x="46.571" y="176" font-family="FeltTipRoman" font-size="14" font-weight="normal">to the bag </tspan> <tspan x="59.822" y="190" font-family="FeltTipRoman" font-size="14" font-weight="normal">to you</tspan>
+      <tspan x="14.79" y="135">One Ingredient</tspan> <tspan x="17.395" y="162" font-size="14" font-weight="normal">It goes from the tree</tspan> <tspan x="46.571" y="176" font-size="14" font-weight="normal">to the bag </tspan> <tspan x="59.822" y="190" font-size="14" font-weight="normal">to you</tspan>
     </text>
     <text transform="translate(-14 -36)">
-      <tspan x="59.42" y="273">Organic</tspan> <tspan x="17.604" y="300" font-family="FeltTipRoman" font-size="14" font-weight="normal">No pesticides or chemicals</tspan>
+      <tspan x="59.42" y="273">Organic</tspan> <tspan x="17.604" y="300" font-size="14" font-weight="normal">No pesticides or chemicals</tspan>
     </text>
     <text transform="translate(-14 -36)">
-      <tspan x="132" y="349">Everything-Free</tspan> <tspan x="100.402" y="376" font-family="FeltTipRoman" font-size="14" font-weight="normal">Gluten-Free, Fat-Free, Dairy-Free…</tspan>
+      <tspan x="132" y="349">Everything-Free</tspan> <tspan x="100.402" y="376" font-size="14" font-weight="normal">Gluten-Free, Fat-Free, Dairy-Free…</tspan>
     </text>
     <text transform="translate(-14 -36)">
-      <tspan x="453.68" y="151.72">Sun-Dried &amp;</tspan> <tspan x="445.85" y="169.72">Tree-Ripened</tspan> <tspan x="429.527" y="193" font-family="FeltTipRoman" font-size="14" font-weight="normal">As Mother Nature Intended</tspan>
+      <tspan x="453.68" y="151.72">Sun-Dried &amp;</tspan> <tspan x="445.85" y="169.72">Tree-Ripened</tspan> <tspan x="429.527" y="193" font-size="14" font-weight="normal">As Mother Nature Intended</tspan>
     </text>
     <text transform="translate(-14 -36)">
-      <tspan x="495.55" y="269.72">Non-GMO</tspan> <tspan x="482.839" y="293" font-family="FeltTipRoman" font-size="14" font-weight="normal">Non-GMO Certified</tspan>
+      <tspan x="495.55" y="269.72">Non-GMO</tspan> <tspan x="482.839" y="293" font-size="14" font-weight="normal">Non-GMO Certified</tspan>
     </text>
     <text transform="translate(-14 -36)">
-      <tspan x="420.1" y="369.72">100% Superfruit</tspan> <tspan x="448.37" y="391" font-family="FeltTipRoman" font-size="14" font-weight="normal">Nothing Added</tspan>
+      <tspan x="420.1" y="369.72">100% Superfruit</tspan> <tspan x="448.37" y="391" font-size="14" font-weight="normal">Nothing Added</tspan>
     </text>
     <text transform="translate(-14 -36)">
-      <tspan x="398.26" y="49.72">Nutrient Rich</tspan> <tspan x="359.687" y="71" font-family="FeltTipRoman" font-size="14" font-weight="normal">Antioxidants, Flavonoids, Polyphenols</tspan> <tspan x="376.809" y="89" font-family="FeltTipRoman" font-size="14" font-weight="normal">Polysaccharides, Amino Acids,</tspan> <tspan x="406.391" y="107" font-family="FeltTipRoman" font-size="14" font-weight="normal">Vitamins &amp; Minerals</tspan>
+      <tspan x="398.26" y="49.72">Nutrient Rich</tspan> <tspan x="359.687" y="71" font-size="14" font-weight="normal">Antioxidants, Flavonoids, Polyphenols</tspan> <tspan x="376.809" y="89" font-size="14" font-weight="normal">Polysaccharides, Amino Acids,</tspan> <tspan x="406.391" y="107" font-size="14" font-weight="normal">Vitamins &amp; Minerals</tspan>
     </text>
   </g>
 </svg>
@@ -131,11 +131,14 @@ function westridge_front_page_content() {
     </div>
 </section>
 <section class="section5">
+    <div class="fade">
     <div class="wrap">
         <h2>World’s Ancient Superfruit</h2>
         <p>Literature from 900 BC has documented the jujube fruit sustaining and providing health benefits to people throughout Asia and other parts of the world for thousands of years.</p>
-        <a href="#">Discover the rich history of the jujube</a>
+        <a href="/history/" class="button">Discover More</a>
     </div>
+    </div>
+
 </section>
 </main>
 

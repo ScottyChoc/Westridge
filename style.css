@@ -1600,6 +1600,8 @@ p.entry-meta {
   background: #6c923e;
   background-image: linear-gradient(120deg, #adda73 0%, #54722b 50%, #adda73 100%);
   color: white; }
+.home .section3 .nutrition-svg {
+  font-family: "felt-tip-roman", sans-serif; }
 .home .section4 {
   background: url("images/jujubes-ontree.jpg") center center/cover;
   color: white; }
@@ -1617,8 +1619,15 @@ p.entry-meta {
     margin-right: 2rem; }
     .home .section4 li:before {
       content: "✓ "; }
-.home .section5 h2 {
-  color: #58361d; }
+.home .section5 {
+  background: url("images/languages.jpg") center center/cover; }
+  .home .section5 .fade {
+    background-image: linear-gradient(0, rgba(255, 255, 255, 0), white 15%, white 85%, rgba(255, 255, 255, 0) 100%); }
+  .home .section5 h2 {
+    color: #58361d; }
+  .home .section5 .button {
+    color: #58361d;
+    border: 2px solid #58361d; }
 
 /* # Sidebars
   ---------------------------------------------------------------------------------------------------- */
@@ -1910,6 +1919,10 @@ p.entry-meta {
   .newsletter .button {
     width: 100%;
     margin: 0; } }
+@media only screen and (max-width: 640px) {
+  .alignleft, .alignright {
+    float: none;
+    text-align: center; } }
 /* # Print Styles
 ---------------------------------------------------------------------------------------------------- */
 @media print {

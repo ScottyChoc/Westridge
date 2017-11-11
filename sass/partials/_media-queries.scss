@@ -249,6 +249,11 @@
       margin: 0 auto 4rem;
     }
   }
+
+
+
+
+
   
   @media only screen and (max-width: 860px) {
     body {
@@ -261,7 +266,7 @@
       padding-left: 5%;
       padding-right: 5%;
     }
-    
+
     // h2 {
     //   font-size: 4rem !important;
     // } todo
@@ -330,5 +335,13 @@
         width: 100%;
         margin: 0;
       }
+    }
+  }
+
+  @media only screen and (max-width: 640px) {
+    
+  .alignleft, .alignright {
+    float: none;
+    text-align: center;
     }
   }

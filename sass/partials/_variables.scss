@@ -7,6 +7,13 @@ $medium-grey: rgb(153,153,153);
 
 $medium-light-grey: rgb(221,221,221);
 $light-grey: rgb(238,238,238);
-$white: rgb(255,255,255);
+$white: rgb(248, 248, 248);
+$white: rgb(255, 255, 255);
 
-$primary: rgb(26, 104, 175);
+$green: rgb(108, 146, 62);
+$red: rgb(175, 44, 51);
+$brown: rgb(88, 54, 29);
+
+$green-grad: linear-gradient(120deg, rgb(173, 218, 115) 0%, rgb(84, 114, 43) 50%, rgb(173, 218, 115) 100%);
+
+$sans: "museo-sans-rounded", sans-serif;

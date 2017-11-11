@@ -3,8 +3,9 @@
   
   .genesis-nav-menu {
     clear: both;
-    font-size: 1.6rem;
-    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: bold;
     line-height: 1;
     width: 100%;
     .menu-item {
@@ -14,24 +15,26 @@
       text-align: left;
     }
     a {
-      color: $dark-grey;
+      color: $brown;
       display: block;
-      padding: 3.2rem 2rem;
+      padding: 2.2rem 1rem;
       text-decoration: none;
+      border-bottom: .25rem solid transparent; 
       &:focus, &:hover {
-        color: $primary;
-        text-decoration: underline;
+        color: $red;
+        border-bottom: .25rem solid $red; 
       }
     }
     .current-menu-item > a {
-      color: $primary;
-      text-decoration: underline;
+      color: $red;
+      // text-decoration: underline;
+      border-bottom: .25rem solid $red; 
     }
     .sub-menu {
       .current-menu-item > a {
         &:focus, &:hover {
-          color: $primary;
-          text-decoration: underline;
+          color: $red;
+          border-bottom: .25rem solid $red; 
         }
       }
       border-top: 1px solid $light-grey;
@@ -99,7 +102,17 @@
   
   /* ## Site Header Navigation
   --------------------------------------------- */
-  
+  .site-header .wrap ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    // li {
+    //   // width: 
+    //   white-space: normal;
+    //   // background: green;
+    // }
+  }
   .site-header .genesis-nav-menu li li {
     margin-left: 0;
   }
@@ -118,7 +131,16 @@
   .site-footer .genesis-nav-menu {
     padding-bottom: 2rem;
     a {
-      padding: 0 2rem 1rem;
+      color: $brown;
+      padding: 2rem;
+      &:focus, &:hover {
+        color: $green;
+        border-bottom-color: $green;
+      }
+    }
+    .current-menu-item > a {
+      color: $green;
+      border-bottom-color: $green;
     }
   }
   

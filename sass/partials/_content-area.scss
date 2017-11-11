@@ -1,151 +1,272 @@
 /* # Content Area
-  ---------------------------------------------------------------------------------------------------- */
-  
-  /* ## Entries
-  --------------------------------------------- */
-  
-  .entry {
+---------------------------------------------------------------------------------------------------- */
+
+main {
+ margin-top: 21.5rem;
+}
+
+/* ## Entries
+--------------------------------------------- */
+
+.entry {
+  background-color: $white;
+  margin-bottom: 4rem;
+  padding: 0 8rem;
+}
+
+.entry-content {
+  ol, ul {
+    margin-bottom: 2.8rem;
+    margin-left: 4rem;
+  }
+  ol > li {
+    list-style-type: decimal;
+  }
+  ul > li {
+    list-style-type: disc;
+  }
+  ol ol, ul ul {
+    margin-bottom: 0;
+  }
+  code {
+    background-color: $dark-grey;
+    color: $light-grey;
+  }
+}
+
+/* ## Entry Meta
+--------------------------------------------- */
+
+p.entry-meta {
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+
+.entry-header .entry-meta {
+  margin-bottom: 2.4rem;
+}
+
+.entry-footer .entry-meta {
+  border-top: 1px solid $light-grey;
+  padding-top: 2.4rem;
+}
+
+.entry-categories, .entry-tags {
+  display: block;
+}
+
+.entry-comments-link::before {
+  content: "\2014";
+  margin: 0 0.6rem 0 0.2rem;
+}
+
+/* ## Pagination
+--------------------------------------------- */
+
+.pagination {
+  clear: both;
+  margin: 4rem 0;
+}
+
+.adjacent-entry-pagination {
+  margin-bottom: 0;
+}
+
+.archive-pagination {
+  li {
+    display: inline;
+  }
+  a {
     background-color: $white;
-    margin-bottom: 4rem;
-    padding: 7rem 8rem;
-  }
-  
-  .entry-content {
-    ol, ul {
-      margin-bottom: 2.8rem;
-      margin-left: 4rem;
-    }
-    ol > li {
-      list-style-type: decimal;
-    }
-    ul > li {
-      list-style-type: disc;
-    }
-    ol ol, ul ul {
-      margin-bottom: 0;
-    }
-    code {
-      background-color: $dark-grey;
-      color: $light-grey;
-    }
-  }
-  
-  /* ## Entry Meta
-  --------------------------------------------- */
-  
-  p.entry-meta {
+    color: $dark-grey;
+    cursor: pointer;
+    display: inline-block;
     font-size: 1.6rem;
-    margin-bottom: 0;
-  }
-  
-  .entry-header .entry-meta {
-    margin-bottom: 2.4rem;
-  }
-  
-  .entry-footer .entry-meta {
-    border-top: 1px solid $light-grey;
-    padding-top: 2.4rem;
-  }
-  
-  .entry-categories, .entry-tags {
-    display: block;
-  }
-  
-  .entry-comments-link::before {
-    content: "\2014";
-    margin: 0 0.6rem 0 0.2rem;
-  }
-  
-  /* ## Pagination
-  --------------------------------------------- */
-  
-  .pagination {
-    clear: both;
-    margin: 4rem 0;
-  }
-  
-  .adjacent-entry-pagination {
-    margin-bottom: 0;
-  }
-  
-  .archive-pagination {
-    li {
-      display: inline;
-    }
-    a {
-      background-color: $white;
-      color: $dark-grey;
-      cursor: pointer;
-      display: inline-block;
-      font-size: 1.6rem;
-      font-weight: 600;
-      padding: 0.8rem 1.2rem;
-      text-decoration: none;
-      &:focus, &:hover {
-        background-color: $primary;
-        color: $white;
-      }
-    }
-    .active a {
-      background-color: $primary;
+    font-weight: 600;
+    padding: 0.8rem 1.2rem;
+    text-decoration: none;
+    &:focus, &:hover {
+      background-color: $green;
       color: $white;
     }
   }
-  
-  /* ## Comments
-  --------------------------------------------- */
-  
-  .comment-respond, .entry-comments, .entry-pings {
-    background-color: $white;
-    font-size: 1.6rem;
-    margin-bottom: 4rem;
+  .active a {
+    background-color: $green;
+    color: $white;
   }
-  
-  .comment-respond, .entry-pings {
-    padding: 6rem 6rem 3.2rem;
+}
+
+/* ## Comments
+--------------------------------------------- */
+
+.comment-respond, .entry-comments, .entry-pings {
+  background-color: $white;
+  font-size: 1.6rem;
+  margin-bottom: 4rem;
+}
+
+.comment-respond, .entry-pings {
+  padding: 6rem 6rem 3.2rem;
+}
+
+.entry-comments {
+  padding: 6rem;
+}
+
+.comment-list {
+  li {
+    padding: 4rem 0 0 3rem;
   }
-  
-  .entry-comments {
-    padding: 6rem;
+  .depth-1 {
+    padding-left: 0;
   }
+}
+
+.comment-header {
+  margin-bottom: 3rem;
+}
+
+.comment-content {
+  clear: both;
+  ul > li {
+    list-style-type: disc;
+  }
+}
   
-  .comment-list {
-    li {
-      padding: 4rem 0 0 3rem;
+.comment-respond {
+  input {
+    &[type="email"], &[type="text"], &[type="url"] {
+      width: 50%;
     }
-    .depth-1 {
-      padding-left: 0;
+  }
+  label {
+    display: block;
+    margin-right: 1.2rem;
+  }
+}
+
+.comment-header p {
+  margin-bottom: 0;
+}
+
+.entry-pings .reply {
+  display: none;
+}
+
+.home {
+  .section1, .section2, .section3, .section4, .section5 {
+    padding: 10vw 0;
+    text-align: center;
+    h2 {
+      font-size: 6rem;
     }
-  }
-  
-  .comment-header {
-    margin-bottom: 3rem;
-  }
-  
-  .comment-content {
-    clear: both;
-    ul > li {
-      list-style-type: disc;
-    }
-  }
-  
-  .comment-respond {
-    input {
-      &[type="email"], &[type="text"], &[type="url"] {
-        width: 50%;
+    .button {
+      background-color: rgba(255, 255, 255, 0.05);
+      color: $white;
+      border: 2px solid $white;
+      &:focus, &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        // background-color: $red;
+        // color: $white;
       }
     }
-    label {
-      display: block;
-      margin-right: 1.2rem;
+    
+  }
+  .section1 {
+    background: url('images/hero.jpg') top center / cover;
+    .button {
+    //   background-color: rgba(108, 146, 62, 0.05);
+      color: $green;
+      border: 2px solid $green;
+    //   &:focus, &:hover {
+    //     background-color: rgba(108, 146, 62, 0.1);
+    //     // color: $white;
+    //   }
+    }
+    .wrap {
+      display: flex;
+      flex-direction: row;
+      // align-content: flex-start;
+      max-width: 65vw;
+    }
+    .hero-bag {
+      width: 35%;
+      max-width: 510px;
+      img {
+      }
+    }
+    .hero-content {
+      align-self: center;
+      width: 65%;
+      // max-width: 60%;
+      h2 {
+        font-family: "felt-tip-roman",sans-serif;
+        font-size: 8rem;
+        font-weight: bold;
+        .hero-green { color: $green; }
+        .hero-red { color: $red; }
+      }
+      p {
+        text-align: left;
+      }      
     }
   }
-  
-  .comment-header p {
-    margin-bottom: 0;
+
+  .section2 {
+    background: $green;
+    background-image: $green-grad;
+    color: $white;
+    // .button {
+    //   background-color: rgba(255, 255, 255, 0.05);
+    //   color: $white;
+    //   border: 2px solid $white;
+    //   &:focus, &:hover {
+    //     background-color: rgba(255, 255, 255, 0.1);
+    //     // background-color: $red;
+    //     // color: $white;
+    //   }
+    // }
   }
   
-  .entry-pings .reply {
-    display: none;
+  .section3 {
+    
   }
-  
+  .section4 {
+    // text-align: left;
+    // text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    background: url('images/jujubes-ontree.jpg') center center / cover;
+    color: $white;
+    .button {
+        background-color: rgba(108, 146, 62, 0.5);
+        // color: $green;
+      //   border: 2px solid $green;
+        &:focus, &:hover {
+          background-color: rgba(108, 146, 62, 0.45);
+      //     // color: $white;
+        }
+      }
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 2.8rem;
+    }
+    li {
+      &:before {
+        content: "✓ ";
+        // color: $green;
+      }
+      // justify-content: space-around;
+      margin-right: 2rem;
+    }
+
+  }
+  .section5 {
+    h2 {
+      color: $brown;
+    }
+  }
+}
+
+

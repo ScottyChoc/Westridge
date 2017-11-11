@@ -1,0 +1,97 @@
+/* # Before Footer
+  ---------------------------------------------------------------------------------------------------- */
+  
+  /* ## Newsletter
+  --------------------------------------------- */
+
+.newsletter {
+  text-align: center;
+  padding: 10rem 0;
+  // padding: 10vh;
+  background: url(images/jujubes-piled.jpg) center center / cover;
+  color: $white;
+  .mc-field-group {
+    display: inline-block;
+  }
+  input.email {
+    // display: inline-block;
+    width: 35rem;
+    border-top-left-radius: 2.6rem;
+    border-bottom-left-radius: 2.6rem;
+    margin: 0;
+  }
+  input {
+    &[type="submit"] {  
+      // background-color: $green;
+      font-size: 1.8rem;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      &:focus, &:hover {
+        background-color: $green;
+      }
+    }
+  }
+  label {
+    display: block;
+    font-size: 16px;
+    padding-bottom: 10px;
+    font-weight: bold;
+  }
+  .clear {
+    display: inline-block;
+  }
+  div {
+    &#mce-responses {
+      float: left;
+      top: -1.4em;
+      padding: 0em .5em 0em .5em;
+      overflow: hidden;
+      width: 90%;
+      margin: 0 5%;
+      clear: both;
+    }
+    &.response {
+      margin: 1em 0;
+      padding: 1em .5em .5em 0;
+      font-weight: bold;
+      float: left;
+      top: -1.5em;
+      z-index: 1;
+      width: 80%;
+    }
+  }
+  #mce-error-response {
+    display: none;
+  }
+  #mce-success-response {
+    color: #529214;
+    display: none;
+  }
+  label.error {
+    display: block;
+    float: none;
+    width: auto;
+    margin-left: 1.05em;
+    text-align: left;
+    padding: .5em 0;
+  }
+}
+
+/* ## Certs
+--------------------------------------------- */
+
+.certs {
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 3rem 0;
+    li {
+      padding: 0 1rem;
+      img {
+        max-height: 10rem;
+      }
+    }
+  }
+}
+  

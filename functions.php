@@ -26,10 +26,10 @@ function genesis_sample_localization_setup(){
 include_once( get_stylesheet_directory() . '/lib/helper-functions.php' );
 
 // Add Image upload and Color select to WordPress Theme Customizer.
-require_once( get_stylesheet_directory() . '/lib/customize.php' );
+// require_once( get_stylesheet_directory() . '/lib/customize.php' );
 
 // Include Customizer CSS.
-include_once( get_stylesheet_directory() . '/lib/output.php' );
+// include_once( get_stylesheet_directory() . '/lib/output.php' );
 
 // Add WooCommerce support.
 include_once( get_stylesheet_directory() . '/lib/woocommerce/woocommerce-setup.php' );

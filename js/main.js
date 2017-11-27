@@ -19,12 +19,18 @@ jQuery(function( $ ){
             $( '.site-header' ).removeClass( 'scrolled' );
         }
     });
+    var container = $(this);
+    
+    container.find('.accordian-header').click(function() {
+      if($(this).siblings('.accordian-section').css('display') == 'block'){
+         container.find('.accordian-section').slideUp(150);
+      } else {
+        container.find('.accordian-section').slideUp(150);
+         $(this).siblings('.accordian-section').slideDown(150);
+      }
+    });
 });
 
-// jQuery(function( $ ) {
-//     $( document ).on('scroll', function(){
-//     $(window).resize(function() {
-//         $("main").css("margin-top", $(".site-header").height());
-//     }).resize();
-// })
+jQuery(function( $ ){
+  
 });

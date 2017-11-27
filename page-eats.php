@@ -1,24 +1,45 @@
 <?php
 /**
- * Genesis Framework.
+ * Template Name: Eats
  *
- * @package Genesis\Templates
- * @author  StudioPress
+ * @package Westridge
+ * @author  Scott Loveless
  * @license GPL-2.0+
- * @link    http://my.studiopress.com/themes/genesis/
+ * @link    https://scott.loveless.org/
  */
 
+add_action( 'genesis_entry_footer', 'westridge_recipe_loop' );
+function westridge_recipe_loop() {
 
- function westridge_recipe_loop() {
-    $args = array( 'post_type' => 'recipe' );
-    $loop = new WP_Query( $args );
-    while ( $loop->have_posts() ) : $loop->the_post();
-      echo '<a href="' . get_the_permalink() . '">' . the_title() . '</a>'; 
-    //   echo '<div class="entry-content">';
-    //   the_content();
-    //   echo '</div>';
-    endwhile;
-    }
+  $args = array(
+    'post_type' => 'recipe', 
+  );
+  $loop = new WP_Query( $args );
+  if( $loop->have_posts() ) {
+    echo '
+    <section id="recipes">
+    <header class="entry-header">
+    <h1 class="entry-title" itemprop="headline">Recipes</h1>
+    </header>
+    <div class="entry-content recipes" itemprop="recipes">
+    
+    ';
+    // loop through posts
+    while( $loop->have_posts() ): $loop->the_post();
 
- add_action( 'genesis_entry_footer', westridge_recipe_loop);
+    echo '
+      <article class="recipe" itemprop="recipe">
+        <a href="' . get_the_permalink() . '">
+          <h2>' . get_the_title() . '</h2>
+          ' . get_the_post_thumbnail() . '
+        </a>
+      </article>
+        ';
+      endwhile;
+      echo '</div>';
+      
+  }
+  wp_reset_postdata();
+}
+
 genesis();

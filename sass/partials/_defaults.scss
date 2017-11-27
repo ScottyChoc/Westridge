@@ -106,6 +106,15 @@ blockquote {
     position: relative;
     top: -1rem;
   }
+  &::after {
+    content: "\201C";
+    // display: block;
+    font-size: 3rem;
+    height: 0;
+    left: 2rem;
+    position: relative;
+    top: -1rem;
+  }
 }
 
 /* ## Headings
@@ -500,4 +509,33 @@ td:first-child, th:first-child {
   font-size: 2.6rem;
   font-weight: bold;
   font-style: italic;
+}
+
+/* ## Accordian
+--------------------------------------------- */
+
+.accordian {
+  list-style: none;
+  margin: 0 0 40px;
+  padding: 0;
+  border: 1px solid $green;
+  border-top: 0;
+  header {
+    display: block;
+    margin: 0;
+    padding: 1em;
+    color: $white;
+    background: $green;
+    border-top: 1px solid $light-grey;
+    cursor: pointer;
+  }
+  section {
+    display: none;
+    padding: 1em;
+    // background: $white;
+    border-top: 1px solid $light-grey;
+    &.active {
+      display: block;
+    }
+  }
 }

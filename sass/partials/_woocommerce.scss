@@ -1,0 +1,35 @@
+.products {
+    display: flex;
+    flex-direction: row;
+}
+
+.woocommerce-ordering,
+.woocommerce-result-count,
+.woocommerce-Price-amount,
+.add_to_cart_button,
+.summary .cart {
+    display: none;
+}
+
+.product.entry {
+    display: flex;
+    flex-direction: row;
+    ul li {
+        list-style-type: disc;
+    }
+    .woocommerce-product-gallery, .summary {
+        width: 50%;
+    }
+    .woocommerce-tabs {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    .product.entry {
+        flex-direction: column;
+        .woocommerce-product-gallery, .summary {
+            width: 100%;
+        }
+    }
+}    

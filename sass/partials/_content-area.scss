@@ -2,7 +2,7 @@
 ---------------------------------------------------------------------------------------------------- */
 
 main {
- margin-top: 21.5rem;
+ margin-top: 9.2rem;
 }
 
 /* ## Entries
@@ -15,6 +15,8 @@ main {
 }
 
 .entry-content {
+  display: flex;
+  flex-direction: column;
   ol, ul {
     margin-bottom: 2.8rem;
     margin-left: 4rem;
@@ -32,6 +34,15 @@ main {
     background-color: $dark-grey;
     color: $light-grey;
   }
+  section {
+    display: flex;
+    flex-direction: row;
+    padding: 4rem 0;
+  }
+}
+
+.page h1.entry-title {
+  text-align: center;
 }
 
 /* ## Entry Meta
@@ -216,35 +227,23 @@ p.entry-meta {
     background: $green;
     background-image: $green-grad;
     color: $white;
-    // .button {
-    //   background-color: rgba(255, 255, 255, 0.05);
-    //   color: $white;
-    //   border: 2px solid $white;
-    //   &:focus, &:hover {
-    //     background-color: rgba(255, 255, 255, 0.1);
-    //     // background-color: $red;
-    //     // color: $white;
-    //   }
-    // }
   }
   
   .section3 {
     .nutrition-svg {
+      max-width: 90vw;
       font-family: "felt-tip-roman", sans-serif;
     }
   }
   .section4 {
-    // text-align: left;
-    // text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
     background: url('images/jujubes-ontree.jpg') center center / cover;
     color: $white;
     .button {
         background-color: rgba(108, 146, 62, 0.5);
-        // color: $green;
-      //   border: 2px solid $green;
+        background-color: $green;
         &:focus, &:hover {
           background-color: rgba(108, 146, 62, 0.45);
-      //     // color: $white;
+          background-color: $green;
         }
       }
     ul {
@@ -257,30 +256,38 @@ p.entry-meta {
     li {
       &:before {
         content: "✓ ";
-        // color: $green;
       }
-      // justify-content: space-around;
       margin-right: 2rem;
     }
 
   }
   .section5 {
-    background: url('images/languages.jpg') center center / cover;
+    background: url('images/languages.png') center center / cover;
     .fade {
-      // padding: 10rem 0;
-      background-image: linear-gradient(0, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1.0) 15%, rgba(255, 255, 255, 1.0) 85%, rgba(255, 255, 255, 0) 100%);
+      padding: 6rem 0;
+      background-image: linear-gradient(0, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75) 15%, rgba(255, 255, 255, 1.0) 85%, rgba(255, 255, 255, 0) 100%);
     }
     h2 {
       color: $brown;
     }
     .button {
-      // background-color: rgba(108, 146, 62, 0.5);
       color: $brown;
       border: 2px solid $brown;
-      &:focus, &:hover {
-        // background-color: rgba(108, 146, 62, 0.45);
-    //     // color: $white;
-      }
+    }
+  }
+}
+
+.recipes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  .recipe {
+    width: calc(100% / 3);
+    padding: 1rem;
+    h2 {
+      font-size: 2rem;
     }
   }
 }

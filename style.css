@@ -209,21 +209,23 @@ html, input[type="search"] {
     align-items: center;
     justify-content: space-between; }
 
-.header-image .site-title {
-  display: inline-block;
-  text-indent: -9999px;
-  margin: 0; }
-.header-image .site-description {
-  display: none; }
-.header-image .scrolled .site-title a {
-  height: 7rem;
-  width: 100%; }
-.header-image .site-title a {
-  display: block;
-  background-position: center !important;
-  background-size: contain !important;
-  height: 14rem;
-  width: 100%; }
+.header-image {
+  position: relative; }
+  .header-image .site-title {
+    display: inline-block;
+    text-indent: -9999px;
+    margin: 0; }
+  .header-image .site-description {
+    display: none; }
+  .header-image .site-title a {
+    display: block;
+    background-position: center !important;
+    background-size: contain !important;
+    height: 7rem;
+    width: 100%; }
+
+.title-area p.site-title {
+  font-size: 3.6rem; }
 
 /* ## Widget Area
 --------------------------------------------- */
@@ -400,6 +402,13 @@ blockquote {
     font-size: 3rem;
     height: 0;
     left: -2rem;
+    position: relative;
+    top: -1rem; }
+  blockquote::after {
+    content: "\201C";
+    font-size: 3rem;
+    height: 0;
+    left: 2rem;
     position: relative;
     top: -1rem; }
 
@@ -703,6 +712,29 @@ td:first-child, th:first-child {
   font-size: 2.6rem;
   font-weight: bold;
   font-style: italic; }
+
+/* ## Accordian
+--------------------------------------------- */
+.accordian {
+  list-style: none;
+  margin: 0 0 40px;
+  padding: 0;
+  border: 1px solid #6c923e;
+  border-top: 0; }
+  .accordian header {
+    display: block;
+    margin: 0;
+    padding: 1em;
+    color: white;
+    background: #6c923e;
+    border-top: 1px solid #eeeeee;
+    cursor: pointer; }
+  .accordian section {
+    display: none;
+    padding: 1em;
+    border-top: 1px solid #eeeeee; }
+    .accordian section.active {
+      display: block; }
 
 /* # Common Classes
   ---------------------------------------------------------------------------------------------------- */
@@ -916,6 +948,13 @@ blockquote {
     left: -2rem;
     position: relative;
     top: -1rem; }
+  blockquote::after {
+    content: "\201C";
+    font-size: 3rem;
+    height: 0;
+    left: 2rem;
+    position: relative;
+    top: -1rem; }
 
 /* ## Headings
 --------------------------------------------- */
@@ -1218,6 +1257,29 @@ td:first-child, th:first-child {
   font-weight: bold;
   font-style: italic; }
 
+/* ## Accordian
+--------------------------------------------- */
+.accordian {
+  list-style: none;
+  margin: 0 0 40px;
+  padding: 0;
+  border: 1px solid #6c923e;
+  border-top: 0; }
+  .accordian header {
+    display: block;
+    margin: 0;
+    padding: 1em;
+    color: white;
+    background: #6c923e;
+    border-top: 1px solid #eeeeee;
+    cursor: pointer; }
+  .accordian section {
+    display: none;
+    padding: 1em;
+    border-top: 1px solid #eeeeee; }
+    .accordian section.active {
+      display: block; }
+
 /* # Widgets
   ---------------------------------------------------------------------------------------------------- */
 .widget {
@@ -1263,6 +1325,13 @@ td:first-child, th:first-child {
   ---------------------------------------------------------------------------------------------------- */
 /* ## Newsletter
 --------------------------------------------- */
+.news-wrap {
+  background: #6c923e;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  padding: 2rem; }
+
 .newsletter {
   text-align: center;
   padding: 10rem 0;
@@ -1272,8 +1341,8 @@ td:first-child, th:first-child {
     display: inline-block; }
   .newsletter input.email {
     width: 35rem;
-    border-top-left-radius: 2.6rem;
-    border-bottom-left-radius: 2.6rem;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
     margin: 0; }
   .newsletter input[type="submit"] {
     font-size: 1.8rem;
@@ -1283,8 +1352,8 @@ td:first-child, th:first-child {
       background-color: #6c923e; }
   .newsletter label {
     display: block;
-    font-size: 16px;
-    padding-bottom: 10px;
+    font-size: 1.6rem;
+    padding-bottom: 1rem;
     font-weight: bold; }
   .newsletter .clear {
     display: inline-block; }
@@ -1325,7 +1394,7 @@ td:first-child, th:first-child {
   justify-content: space-around;
   padding: 3rem 0; }
   .certs ul li {
-    padding: 0 1rem; }
+    padding: 0 2rem; }
     .certs ul li img {
       max-height: 10rem; }
 
@@ -1453,7 +1522,7 @@ td:first-child, th:first-child {
 /* # Content Area
 ---------------------------------------------------------------------------------------------------- */
 main {
-  margin-top: 21.5rem; }
+  margin-top: 9.2rem; }
 
 /* ## Entries
 --------------------------------------------- */
@@ -1462,18 +1531,28 @@ main {
   margin-bottom: 4rem;
   padding: 0 8rem; }
 
-.entry-content ol, .entry-content ul {
-  margin-bottom: 2.8rem;
-  margin-left: 4rem; }
-.entry-content ol > li {
-  list-style-type: decimal; }
-.entry-content ul > li {
-  list-style-type: disc; }
-.entry-content ol ol, .entry-content ul ul {
-  margin-bottom: 0; }
-.entry-content code {
-  background-color: #333333;
-  color: #eeeeee; }
+.entry-content {
+  display: flex;
+  flex-direction: column; }
+  .entry-content ol, .entry-content ul {
+    margin-bottom: 2.8rem;
+    margin-left: 4rem; }
+  .entry-content ol > li {
+    list-style-type: decimal; }
+  .entry-content ul > li {
+    list-style-type: disc; }
+  .entry-content ol ol, .entry-content ul ul {
+    margin-bottom: 0; }
+  .entry-content code {
+    background-color: #333333;
+    color: #eeeeee; }
+  .entry-content section {
+    display: flex;
+    flex-direction: row;
+    padding: 4rem 0; }
+
+.page h1.entry-title {
+  text-align: center; }
 
 /* ## Entry Meta
 --------------------------------------------- */
@@ -1601,14 +1680,17 @@ p.entry-meta {
   background-image: linear-gradient(120deg, #adda73 0%, #54722b 50%, #adda73 100%);
   color: white; }
 .home .section3 .nutrition-svg {
+  max-width: 90vw;
   font-family: "felt-tip-roman", sans-serif; }
 .home .section4 {
   background: url("images/jujubes-ontree.jpg") center center/cover;
   color: white; }
   .home .section4 .button {
-    background-color: rgba(108, 146, 62, 0.5); }
+    background-color: rgba(108, 146, 62, 0.5);
+    background-color: #6c923e; }
     .home .section4 .button:focus, .home .section4 .button:hover {
-      background-color: rgba(108, 146, 62, 0.45); }
+      background-color: rgba(108, 146, 62, 0.45);
+      background-color: #6c923e; }
   .home .section4 ul {
     display: flex;
     flex-direction: row;
@@ -1620,14 +1702,27 @@ p.entry-meta {
     .home .section4 li:before {
       content: "✓ "; }
 .home .section5 {
-  background: url("images/languages.jpg") center center/cover; }
+  background: url("images/languages.png") center center/cover; }
   .home .section5 .fade {
-    background-image: linear-gradient(0, rgba(255, 255, 255, 0), white 15%, white 85%, rgba(255, 255, 255, 0) 100%); }
+    padding: 6rem 0;
+    background-image: linear-gradient(0, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75) 15%, white 85%, rgba(255, 255, 255, 0) 100%); }
   .home .section5 h2 {
     color: #58361d; }
   .home .section5 .button {
     color: #58361d;
     border: 2px solid #58361d; }
+
+.recipes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end; }
+  .recipes .recipe {
+    width: calc(100% / 3);
+    padding: 1rem; }
+    .recipes .recipe h2 {
+      font-size: 2rem; }
 
 /* # Sidebars
   ---------------------------------------------------------------------------------------------------- */
@@ -1659,6 +1754,12 @@ p.entry-meta {
       .site-footer .copy a:focus, .site-footer .copy a:hover {
         text-decoration: none; }
 
+#menu-footer-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+
 /* ## social
 --------------------------------------------- */
 .soc {
@@ -1673,6 +1774,32 @@ p.entry-meta {
     .soc li svg:focus, .soc li svg:hover {
       fill: #6c923e; }
 
+.products {
+  display: flex;
+  flex-direction: row; }
+
+.woocommerce-ordering,
+.woocommerce-result-count,
+.woocommerce-Price-amount,
+.add_to_cart_button,
+.summary .cart {
+  display: none; }
+
+.product.entry {
+  display: flex;
+  flex-direction: row; }
+  .product.entry ul li {
+    list-style-type: disc; }
+  .product.entry .woocommerce-product-gallery, .product.entry .summary {
+    width: 50%; }
+  .product.entry .woocommerce-tabs {
+    display: none; }
+
+@media only screen and (max-width: 860px) {
+  .product.entry {
+    flex-direction: column; }
+    .product.entry .woocommerce-product-gallery, .product.entry .summary {
+      width: 100%; } }
 /* # Media Queries
   ---------------------------------------------------------------------------------------------------- */
 @media only screen and (max-width: 1340px) {
@@ -1877,9 +2004,11 @@ p.entry-meta {
       flex-direction: column;
       align-items: center; }
       .home .section1 .wrap .hero-bag {
-        width: 100%; }
+        max-width: 50vw; }
       .home .section1 .wrap .hero-content {
         width: 100%; }
+  .home .section2 h2, .home .section3 h2, .home .section4 h2, .home .section5 h2 {
+    font-size: 4rem; }
 
   .after-entry, .archive-description, .author-box, .comment-respond, .entry, .entry-comments, .entry-pings {
     padding: 3rem;
@@ -1904,15 +2033,15 @@ p.entry-meta {
   .newsletter input.email {
     width: 100%;
     text-align: center;
-    border-top-left-radius: 2.6rem;
-    border-top-right-radius: 2.6rem;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
   .newsletter input[type="submit"] {
     border-top-left-radius: 0rem;
     border-top-right-radius: 0rem;
-    border-bottom-right-radius: 2.6rem;
-    border-bottom-left-radius: 2.6rem; }
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px; }
   .newsletter .clear {
     display: block;
     width: 100%; }
@@ -1920,9 +2049,24 @@ p.entry-meta {
     width: 100%;
     margin: 0; } }
 @media only screen and (max-width: 640px) {
+  .recipes {
+    flex-direction: column;
+    align-items: center; }
+    .recipes .recipe {
+      width: 100%;
+      padding: 0 0 2rem;
+      margin: 0 auto; }
+
+  .products {
+    flex-direction: column; }
+
   .alignleft, .alignright {
     float: none;
-    text-align: center; } }
+    text-align: center; }
+
+  #menu-footer-menu {
+    flex-direction: column;
+    align-items: center; } }
 /* # Print Styles
 ---------------------------------------------------------------------------------------------------- */
 @media print {
